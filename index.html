@@ -18,166 +18,170 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-6">
-              <input
-                type="search"
-                placeholder="Type a city..."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control rounded-pill shadow-sm"
-              />
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control rounded-pill shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="
+                    form-control
+                    rounded-pill
+                    btn btn-primary
+                    shadow-sm
+                    w-100
+                  "
+                />
+              </div>
+              <div class="col-3">
+                <button
+                  class="rounded-pill btn btn-success w-100"
+                  id="current-location-button"
+                >
+                  Current
+                </button>
+              </div>
             </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="
-                  form-control
-                  rounded-pill
-                  btn btn-primary
-                  shadow-sm
-                  w-100
-                "
-              />
-            </div>
-            <div class="col-3">
-              <button
-                class="rounded-pill btn btn-success w-100"
-                id="current-location-button"
-              >
-                Current
-              </button>
-            </div>
-          </div>
-        </form>
+          </form>
 
-        <h1 id="city"></h1>
-        <div class="date-weather">
-          <ul>
-            <li id="date"></li>
-            <li id="description"></li>
-          </ul>
-        </div>
-        <div class="current-weather">
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-            alt="Sunny Cloudy icon"
-            class="weather-icon"
-          />
-          <br />
-          <span class="temperature" id="temperature"></span
-          ><span class="units">
-            <a href="#" id="celsius-link">°C</a> |
-            <a href="#" id="fahrenheit-link">°F</a>
-          </span>
-          <br />
-          <span class="current-forecast">
-            <a href="#">
-              <span id="temperature-min"></span>
-              °C /</a
-            >
-            <a href="#">
-              <span id="temperature-max"></span>
-              °C</a
-            >
-          </span>
-        </div>
-        <div class="weather-conditions">
-          <ul>
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <span id="wind"></span> km/h</li>
-          </ul>
-        </div>
-        <div class="forecast-weekdays">
-          <div class="row">
-            <div class="col-2">
-              <div class="forecast-weekday">Sun</div>
-              <img
-                class="forecast-icon"
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="forecast icon"
-              />
-              <div class="weekday-temperature">
-                <span class="weekday-temperature-min">10° / </span>
-                <span class="weekday-temperature-max">20°</span>
-              </div>
+          <div class="overview">
+            <h1 id="city"></h1>
+            <div class="date-weather">
+              <ul>
+                <li id="date"></li>
+                <li id="description"></li>
+              </ul>
             </div>
-            <div class="col-2">
-              <div class="forecast-weekday">Mon</div>
-              <img
-                class="forecast-icon"
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="forecast icon"
-              />
-              <div class="weekday-temperature">
-                <span class="weekday-temperature-min">10° / </span>
-                <span class="weekday-temperature-max">20°</span>
+          </div>
+          <div class="weather-temperature">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+              alt="Sunny Cloudy icon"
+              class="weather-icon"
+            />
+            <br />
+            <span class="temperature" id="temperature"></span
+            ><span class="units">
+              <a href="#" id="celsius-link">°C</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+            <br />
+            <span class="current-forecast">
+              <a href="#">
+                <span id="temperature-max"></span>
+                °C /</a
+              >
+              <a href="#">
+                <span id="temperature-min"></span>
+                °C</a
+              >
+            </span>
+          </div>
+          <div class="weather-conditions">
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
+          <div class="forecast-weekdays">
+            <div class="row">
+              <div class="col-2">
+                <div class="forecast-weekday">Sun</div>
+                <img
+                  class="forecast-icon"
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                  alt="forecast icon"
+                />
+                <div class="weekday-temperature">
+                  <span class="weekday-temperature-max">20° /</span>
+                  <span class="weekday-temperature-min">10°</span>
+                </div>
               </div>
-            </div>
-            <div class="col-2">
-              <div class="forecast-weekday">Tue</div>
-              <img
-                class="forecast-icon"
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="forecast icon"
-              />
-              <div class="weekday-temperature">
-                <span class="weekday-temperature-min">10° / </span>
-                <span class="weekday-temperature-max">20°</span>
+              <div class="col-2">
+                <div class="forecast-weekday">Mon</div>
+                <img
+                  class="forecast-icon"
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                  alt="forecast icon"
+                />
+                <div class="weekday-temperature">
+                  <span class="weekday-temperature-max">20° /</span>
+                  <span class="weekday-temperature-min">10°</span>
+                </div>
               </div>
-            </div>
-            <div class="col-2">
-              <div class="forecast-weekday">Wed</div>
-              <img
-                class="forecast-icon"
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="forecast icon"
-              />
-              <div class="weekday-temperature">
-                <span class="weekday-temperature-min">10° / </span>
-                <span class="weekday-temperature-max">20°</span>
+              <div class="col-2">
+                <div class="forecast-weekday">Tue</div>
+                <img
+                  class="forecast-icon"
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                  alt="forecast icon"
+                />
+                <div class="weekday-temperature">
+                  <span class="weekday-temperature-max">20° /</span>
+                  <span class="weekday-temperature-min">10°</span>
+                </div>
               </div>
-            </div>
-            <div class="col-2">
-              <div class="forecast-weekday">Thu</div>
-              <img
-                class="forecast-icon"
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="forecast icon"
-              />
-              <div class="weekday-temperature">
-                <span class="weekday-temperature-min">10° / </span>
-                <span class="weekday-temperature-max">20°</span>
+              <div class="col-2">
+                <div class="forecast-weekday">Wed</div>
+                <img
+                  class="forecast-icon"
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                  alt="forecast icon"
+                />
+                <div class="weekday-temperature">
+                  <span class="weekday-temperature-max">20° /</span>
+                  <span class="weekday-temperature-min">10°</span>
+                </div>
               </div>
-            </div>
-            <div class="col-2">
-              <div class="forecast-weekday">Fri</div>
-              <img
-                class="forecast-icon"
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="forecast icon"
-              />
-              <div class="weekday-temperature">
-                <span class="weekday-temperature-min">10° / </span>
-                <span class="weekday-temperature-max">20°</span>
+              <div class="col-2">
+                <div class="forecast-weekday">Thu</div>
+                <img
+                  class="forecast-icon"
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                  alt="forecast icon"
+                />
+                <div class="weekday-temperature">
+                  <span class="weekday-temperature-max">20° /</span>
+                  <span class="weekday-temperature-min">10°</span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="forecast-weekday">Fri</div>
+                <img
+                  class="forecast-icon"
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                  alt="forecast icon"
+                />
+                <div class="weekday-temperature">
+                  <span class="weekday-temperature-max">20° /</span>
+                  <span class="weekday-temperature-min">10°</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <small class="coded-by">
+          <a
+            href="https://github.com/TamirhaG/vanilla-weather-app"
+            target="_blank"
+            class="source-code"
+            >Open-source code </a
+          >by Tamirha Giraldo
+        </small>
       </div>
     </div>
-    <small class="coded-by">
-      <a
-        href="https://github.com/TamirhaG/vanilla-weather-app"
-        target="_blank"
-        class="source-code"
-        >Open-source code </a
-      >by Tamirha Giraldo
-    </small>
     <script src="src/app.js"></script>
   </body>
 </html>
