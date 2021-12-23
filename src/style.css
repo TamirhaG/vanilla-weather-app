@@ -24,6 +24,7 @@ li {
   font-weight: 100;
   line-height: 20px;
   list-style: none;
+  text-transform: capitalize;
 }
 
 a {
@@ -47,9 +48,6 @@ a {
 
 .overview {
   margin-bottom: 20px;
-}
-
-.date-weather {
   font-size: 18px;
   line-height: 1;
   text-align: center;
