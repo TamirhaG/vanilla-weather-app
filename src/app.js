@@ -42,6 +42,12 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
 
+  let temperatureMaxElement = document.querySelector("#temperature-max");
+  temperatureMaxElement.innerHTML = Math.round(response.data.main.temp_max);
+
+  let temperatureMinElement = document.querySelector("#temperature-min");
+  temperatureMinElement.innerHTML = Math.round(response.data.main.temp_min);
+
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
 
@@ -60,6 +66,8 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+
+search("New York");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
