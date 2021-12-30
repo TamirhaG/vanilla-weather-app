@@ -99,3 +99,33 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          class="forecast-icon"
+          src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+          alt="forecast icon"
+        />
+        <div class="weahter-forecast-temperature">
+          <span class="weahter-forecast-temperature-max">20° /</span>
+          <span class="weahter-forecast-temperature-min">10°</span>
+        </div>
+      </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
