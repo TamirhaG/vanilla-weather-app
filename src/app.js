@@ -95,13 +95,13 @@ function displayForecast(response) {
           }@2x.png"
           alt="forecast icon"
         />
-        <div class="weahter-forecast-temperature">
-          <span class="weahter-forecast-temperature-max">${Math.round(
+        <div class="weather-forecast-temperature">
+          <span class="weather-forecast-temperature-max">${Math.round(
             forecastDay.temp.max
-          )} /</span>
-          <span class="weahter-forecast-temperature-min">${Math.round(
+          )}° /</span>
+          <span class="weather-forecast-temperature-min">${Math.round(
             forecastDay.temp.min
-          )}</span>
+          )}°</span>
         </div>
       </div>
     `;
