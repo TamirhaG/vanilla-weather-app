@@ -1,5 +1,5 @@
+// Date
 function formatDate(timestamp) {
-  //calculate the date
   let date = new Date(timestamp);
   let days = [
     "Sunday",
@@ -21,6 +21,8 @@ function formatDate(timestamp) {
   }
   return `${day}, ${hours}:${minutes}`;
 }
+
+//Weather conditions
 
 function displayTemperature(response) {
   let cityElement = document.querySelector("#city");
@@ -63,16 +65,7 @@ function search(city) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function handleSubmit(event) {
-  event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value);
-}
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
-search("New York");
+// Forecast
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -120,9 +113,36 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "531ba9f1dc72e33490f5aeba8e66b0de";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
+
+// City search and current location
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+function searchLocation(position) {
+  let apiKey = "bad8df618c99f7689be26e10f430a853";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Cusco");

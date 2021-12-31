@@ -1,15 +1,17 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Gochi Hand", cursive;
+  font-family: "Quicksand", sans-serif;
+  background: #f7f7f7;
+  color: #fff;
 }
 
 h1 {
-  color: #7c7c7c;
   font-size: 40px;
-  font-weight: 100;
+  font-weight: bold;
   line-height: 28px;
   text-align: center;
   width: auto;
-  margin: 30px auto 10px;
+  margin: 30px auto 20px;
 }
 
 ul {
@@ -19,7 +21,6 @@ ul {
 }
 
 li {
-  color: #7c7c7c;
   font-size: 18px;
   font-weight: 100;
   line-height: 20px;
@@ -32,7 +33,7 @@ li::first-letter {
 
 a {
   text-decoration: none;
-  color: rbg(33, 33, 33);
+  color: blue;
 }
 
 .weather-app-wrapper {
@@ -44,11 +45,42 @@ a {
   border: 1px solid #dadde1;
   padding: 15px;
   border-radius: 10px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  background: rgb(63, 101, 164);
+  background: linear-gradient(
+    180deg,
+    rgba(63, 101, 164, 1) 0%,
+    rgba(208, 174, 167, 1) 100%
+  );
 }
 
 .search-form {
-  margin: 10px 40px;
+  margin: 10px 70px;
   text-align: center;
+}
+
+.search-button-p {
+  padding: 0%;
+  text-align: left;
+  font-size: 17px;
+}
+
+.search-button-loc {
+  padding: 0 20px;
+  background: #d0aea7;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  max-width: 100%;
+  color: #fff;
+}
+
+.search-button {
+  background: #d0aea7;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  max-width: 100%;
+  padding: 0 10px;
+  color: #fff;
 }
 
 .overview {
@@ -71,7 +103,6 @@ a {
 }
 
 .weather-temperature .active {
-  color: rbg(33, 33, 33);
   cursor: default;
 }
 
@@ -80,7 +111,6 @@ a {
 }
 
 .temperature {
-  color: rbg(33, 33, 33);
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
@@ -94,7 +124,7 @@ a {
 .weather-conditions {
   font-size: 15px;
   line-height: 0.5;
-  margin: 0 auto 40px;
+  margin: 30px auto;
 }
 
 .col-2 {
@@ -102,22 +132,22 @@ a {
 }
 
 .weather-forecast {
+  font-weight: bold;
   display: block;
-  margin: 10px 30px;
+  margin: 40px 30px;
   color: #000;
 }
 
 .weather-forecast-date {
-  font-size: 15px;
-  opacity: 0.5;
+  font-size: 20px;
 }
 
 .forecast-icon {
-  width: 30px;
+  width: 40px;
 }
 
 .weahter-forecast-temperature {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .weahter-forecast-temperature-min {
@@ -126,7 +156,9 @@ a {
 
 .coded-by {
   text-align: center;
+  font-weight: bold;
   margin: 0 auto;
   display: block;
-  font-size: 12px;
+  font-size: 15px;
+  color: #000;
 }
