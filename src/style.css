@@ -68,11 +68,15 @@ a {
 
 .search-button-i .search-button {
   max-width: 180px;
-  padding: 0 15px;
+  padding: 1px 15px;
+}
+
+.search-button-s .search-button {
+  padding: 1px auto;
 }
 
 .search-button-p .search-button {
-  padding: 0% 20px;
+  padding: 1px 20px;
 }
 
 .overview {
