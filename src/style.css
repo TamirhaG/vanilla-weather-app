@@ -37,7 +37,7 @@ a {
 }
 
 .weather-app-wrapper {
-  max-width: 450px;
+  max-width: 480px;
   margin: 20px auto 0;
 }
 
@@ -67,7 +67,7 @@ a {
 }
 
 .search-button-i .search-button {
-  max-width: 180px;
+  max-width: 200px;
   padding: 1px 15px;
 }
 
