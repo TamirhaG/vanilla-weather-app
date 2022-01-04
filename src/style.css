@@ -38,7 +38,7 @@ a {
 
 .weather-app-wrapper {
   max-width: 480px;
-  margin: 20px auto 0;
+  margin: 20px auto;
 }
 
 .weather-app {
@@ -55,28 +55,20 @@ a {
 }
 
 .search-form {
-  margin: 10px 60px;
+  margin: 10px auto;
+  text-align: center;
 }
 
 .search-button {
-  display: block;
   background: #d0aea7;
   border: 1px solid #fff;
   border-radius: 30px;
   color: #fff;
+  padding: 0 10px;
 }
 
-.search-button-i .search-button {
-  max-width: 200px;
-  padding: 1px 15px;
-}
-
-.search-button-s .search-button {
-  padding: 1px auto;
-}
-
-.search-button-p .search-button {
-  padding: 1px 20px;
+.fa-map-marker-alt {
+  padding: 0 15px;
 }
 
 .overview {
@@ -124,15 +116,18 @@ a {
 .weather-conditions {
   font-size: 15px;
   line-height: 0.5;
-  margin: 30px auto;
+  margin: 20px auto;
+  padding: 5px 10px;
+  border: 1px solid #ec6e4c;
+  max-width: 250px;
+  color: #000;
 }
 
-.humidity {
-  font-weight: bold;
-}
-
+.fa-smog,
+.humidity,
+.fa-wind,
 .wind {
-  font-weight: bold;
+  color: #fff;
 }
 
 .col-2 {
@@ -142,7 +137,7 @@ a {
 .weather-forecast {
   font-weight: bold;
   display: block;
-  margin: 40px 20px;
+  margin: 30px 20px 20px;
   color: #000;
 }
 
@@ -165,7 +160,7 @@ a {
 .coded-by {
   text-align: center;
   font-weight: bold;
-  margin: 0 auto;
+  margin: 10px auto;
   display: block;
   font-size: 15px;
   color: #000;
